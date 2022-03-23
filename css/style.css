@@ -1,0 +1,51 @@
+/* color: white; is one declaration, with color being the property and white being the value, and background-color: black; is another declaration. */
+/*Universal Selector*/
+* {
+    color: rgb(10, 3, 10);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blanchedalmond;    
+  }
+  /* A type selector (or element selector) will select all elements of the given element type, and the syntax is just the name of the element */
+  div {
+    color: white;
+  }
+  .img {
+    height: auto;
+    width: 300px;
+  }
+  body {
+    margin: 15px;
+  }
+
+ /*  Class Selectors Classes aren’t required to be unique, so you can use the same class on as many elements as you want.*/
+ .alert-text {
+    color: red;
+  }
+/*   ID Selectors use IDs sparingly (if at all) An ID cannot be repeated on a single page*/
+#title {
+    background-color: red;
+  }
+ /*  Grouping Selector when they share same properties*/
+.read, 
+.unread {
+   color: white;
+   background-color: black;
+ }
+.read {
+   /* several unique declarations */
+   background-color: rgb(0, 255, 64);
+ }
+.unread {
+   /* several unique declarations */
+   background-color: rgb(229, 255, 0);
+ }
+/*  Chaining Selectors note: no space between selectors*/
+.subsection.header {
+    color: red;
+  }
+.subsection#preview {
+    color: blue;
+  }
+/*   In general, you can’t chain more than one type selector since an element can’t be two different types at once. For example, chaining two type selectors like div and p, would give us the selector divp, which wouldn’t work since the selector would try to find a literal <divp> element, which doesn’t exist. */
+/* Descendant Combinator represented in CSS by a single space between selectors. A descendant combinator will only cause elements that match the last selector to be selected if they also have an ancestor (parent, grandparent, etc) that matches the previous selector. something like .ancestor .child would select an element with the class child if it has an ancestor with the class ancestor. Another way to think of it is child will only be selected if it is nested inside of ancestor, no matter how deeply.*/
+/* Note: when comparing selectors you may come across special symbols for the universal selector (*) as well as combinators (+, ~, >, and an empty space). These symbols do not add any specificity in and of themselves. */
