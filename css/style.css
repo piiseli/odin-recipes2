@@ -1,9 +1,13 @@
+html {
+    box-sizing: border-box;
+  }
 /* color: white; is one declaration, with color being the property and white being the value, and background-color: black; is another declaration. */
 /*Universal Selector*/
-* {
-    color: rgb(10, 3, 10);
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: rgb(194 213 150);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: blanchedalmond;    
+    background-color: #0b0b0a;  
   }
   /* A type selector (or element selector) will select all elements of the given element type, and the syntax is just the name of the element */
   div {
